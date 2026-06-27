@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-06-27T06:00:00+00:00",
+  "window": "last_24h",
+  "methodology_note": "YouTube Data API nie udostępnia danych demograficznych widzów dla cudzych filmów. Ten raport rankinguje Shorts z ostatnich 24h po tempie wzrostu wyświetleń i engagement w kategoriach tematycznych statystycznie popularnych wśród widzów 35+ (finanse, nieruchomości, motoryzacja, zdrowie, historia, parenting). To przybliżenie, nie pomiar wieku widzów.",
+  "total_candidates": 3,
+  "categories_scanned": ["Finanse i inwestowanie", "Nieruchomości i dom", "Motoryzacja"],
+  "videos": [
+    {
+      "video_id": "EXAMPLE1",
+      "title": "[PRZYKŁAD] 3 błędy inwestycyjne, które kosztują Cię tysiące",
+      "channel": "Przykładowy Kanał Finansowy",
+      "category": "Finanse i inwestowanie",
+      "published_at": "2026-06-26T18:00:00Z",
+      "views": 482000,
+      "likes": 31000,
+      "comments": 1900,
+      "views_per_hour": 38500,
+      "engagement_pct": 7.1,
+      "viral_score": 9.4,
+      "youth_signal_detected": false,
+      "url": "https://www.youtube.com/shorts/EXAMPLE1",
+      "thumbnail": ""
+    },
+    {
+      "video_id": "EXAMPLE2",
+      "title": "[PRZYKŁAD] Ten klasyk z lat 80 wraca do produkcji",
+      "channel": "Garaż Klasyków",
+      "category": "Motoryzacja",
+      "published_at": "2026-06-26T20:00:00Z",
+      "views": 210000,
+      "likes": 18500,
+      "comments": 640,
+      "views_per_hour": 21000,
+      "engagement_pct": 9.1,
+      "viral_score": 8.1,
+      "youth_signal_detected": false,
+      "url": "https://www.youtube.com/shorts/EXAMPLE2",
+      "thumbnail": ""
+    },
+    {
+      "video_id": "EXAMPLE3",
+      "title": "[PRZYKŁAD] Remont kuchni za 5000 zł — przed i po",
+      "channel": "Dom Krok po Kroku",
+      "category": "Nieruchomości i dom",
+      "published_at": "2026-06-27T02:00:00Z",
+      "views": 95000,
+      "likes": 7200,
+      "comments": 310,
+      "views_per_hour": 17600,
+      "engagement_pct": 8.0,
+      "viral_score": 7.6,
+      "youth_signal_detected": false,
+      "url": "https://www.youtube.com/shorts/EXAMPLE3",
+      "thumbnail": ""
+    }
+  ]
+}

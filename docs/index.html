@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brief Poranny — Viral Shorts 35+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #11131C;
+    --card: #1A1D2B;
+    --card-hover: #20243580;
+    --amber: #FF8A3D;
+    --cyan: #4FD1C5;
+    --text: #E8E6F0;
+    --text-dim: #7A7E94;
+    --hairline: #2A2E42;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+
+  .wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 56px 24px 120px;
+  }
+
+  header.masthead {
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 28px;
+    margin-bottom: 36px;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .eyebrow .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--amber);
+    box-shadow: 0 0 0 0 rgba(255,138,61,0.6);
+    animation: pulse 2.4s infinite;
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255,138,61,0.5); }
+    70% { box-shadow: 0 0 0 8px rgba(255,138,61,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,138,61,0); }
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.05;
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+  }
+
+  .subhead {
+    color: var(--text-dim);
+    font-size: 15px;
+    max-width: 560px;
+    line-height: 1.5;
+  }
+
+  .meta-row {
+    display: flex;
+    gap: 28px;
+    margin-top: 22px;
+    flex-wrap: wrap;
+  }
+
+  .meta-item .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .meta-item .value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    color: var(--text);
+    margin-top: 3px;
+  }
+
+  .methodology {
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    border-left: 3px solid var(--cyan);
+    border-radius: 4px;
+    padding: 16px 20px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--text-dim);
+    margin-bottom: 44px;
+  }
+
+  .methodology strong { color: var(--text); }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .entry {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 18px;
+    background: var(--card);
+    border: 1px solid var(--hairline);
+    border-radius: 8px;
+    padding: 18px 20px;
+    transition: border-color 0.2s ease, transform 0.15s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .entry:hover {
+    border-color: var(--amber);
+    transform: translateX(2px);
+  }
+
+  .rank {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--text-dim);
+    line-height: 1;
+    align-self: center;
+    text-align: center;
+  }
+
+  .entry:nth-child(1) .rank,
+  .entry:nth-child(2) .rank,
+  .entry:nth-child(3) .rank {
+    color: var(--amber);
+  }
+
+  .entry-body { min-width: 0; }
+
+  .entry-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+
+  .title {
+    font-size: 15.5px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  .channel {
+    color: var(--text-dim);
+    font-size: 13px;
+    margin-top: 2px;
+  }
+
+  .score-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--bg);
+    background: var(--amber);
+    padding: 4px 9px;
+    border-radius: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 3px;
+    background: #252A3D;
+    color: var(--cyan);
+    border: 1px solid var(--hairline);
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 22px;
+    margin-top: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    color: var(--text-dim);
+    flex-wrap: wrap;
+  }
+
+  .stats-row .stat b { color: var(--text); font-weight: 500; }
+
+  .velocity-bar-wrap {
+    margin-top: 12px;
+    height: 4px;
+    background: var(--hairline);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .velocity-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--cyan), var(--amber));
+    border-radius: 2px;
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-dim);
+  }
+
+  .empty-state h2 {
+    font-family: 'Fraunces', serif;
+    color: var(--text);
+    font-size: 22px;
+  }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--hairline);
+    color: var(--text-dim);
+    font-size: 12.5px;
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  footer a { color: var(--cyan); text-decoration: none; }
+
+  .loading {
+    color: var(--text-dim);
+    font-family: 'JetBrains Mono', monospace;
+    padding: 40px 0;
+  }
+
+  @media (max-width: 600px) {
+    .entry { grid-template-columns: 36px 1fr; padding: 14px; }
+    .rank { font-size: 22px; }
+    .meta-row { gap: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow"><span class="dot"></span>Aktualizacja codzienna · 08:00</div>
+    <h1>Brief Poranny: Viral Shorts</h1>
+    <p class="subhead">Ranking najszybciej rosnących YouTube Shorts z ostatnich 24h w kategoriach tematycznych statystycznie popularnych wśród widzów 35+.</p>
+    <div class="meta-row">
+      <div class="meta-item">
+        <div class="label">Wygenerowano</div>
+        <div class="value" id="generated-at">—</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">Kandydatów przeanalizowano</div>
+        <div class="value" id="total-candidates">—</div>
+      </div>
+      <div class="meta-item">
+        <div class="label">Okno czasowe</div>
+        <div class="value">24h</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="methodology" id="methodology">
+    <strong>Metodologia:</strong> ładowanie…
+  </div>
+
+  <div id="content">
+    <div class="loading">Wczytywanie danych raportu…</div>
+  </div>
+
+  <footer>
+    <span>Dane: YouTube Data API v3</span>
+    <span id="footer-updated">—</span>
+  </footer>
+
+</div>
+
+<script>
+async function loadReport() {
+  const contentEl = document.getElementById('content');
+  try {
+    const res = await fetch('data/latest.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('Nie znaleziono pliku danych');
+    const report = await res.json();
+    render(report);
+  } catch (err) {
+    contentEl.innerHTML = `
+      <div class="empty-state">
+        <h2>Brak danych raportu</h2>
+        <p>Raport jeszcze się nie wygenerował, albo plik data/latest.json nie istnieje.<br>
+        Sprawdź zakładkę Actions w repozytorium GitHub.</p>
+      </div>`;
+  }
+}
+
+function formatNumber(n) {
+  if (n >= 1000000) return (n / 1000000).toFixed(1).replace('.0', '') + 'M';
+  if (n >= 1000) return (n / 1000).toFixed(1).replace('.0', '') + 'K';
+  return String(n);
+}
+
+function timeAgo(isoString) {
+  const diffMs = Date.now() - new Date(isoString).getTime();
+  const hours = diffMs / 1000 / 3600;
+  if (hours < 1) return Math.round(hours * 60) + ' min temu';
+  return hours.toFixed(1) + ' godz. temu';
+}
+
+function render(report) {
+  document.getElementById('generated-at').textContent =
+    new Date(report.generated_at).toLocaleString('pl-PL', { dateStyle: 'medium', timeStyle: 'short' });
+  document.getElementById('total-candidates').textContent = report.total_candidates ?? (report.videos || []).length;
+  document.getElementById('footer-updated').textContent =
+    'Ostatnia aktualizacja: ' + new Date(report.generated_at).toLocaleString('pl-PL');
+  document.getElementById('methodology').innerHTML =
+    '<strong>Metodologia:</strong> ' + (report.methodology_note || '');
+
+  const videos = report.videos || [];
+  const contentEl = document.getElementById('content');
+
+  if (videos.length === 0) {
+    contentEl.innerHTML = `
+      <div class="empty-state">
+        <h2>Brak Shorts w tym oknie czasowym</h2>
+        <p>${report.note || 'Spróbuj ponownie po następnej aktualizacji.'}</p>
+      </div>`;
+    return;
+  }
+
+  const maxVelocity = Math.max(...videos.map(v => v.views_per_hour || 0), 1);
+
+  contentEl.innerHTML = `<div class="list">` + videos.map((v, i) => `
+    <a class="entry" href="${v.url}" target="_blank" rel="noopener">
+      <div class="rank">${String(i + 1).padStart(2, '0')}</div>
+      <div class="entry-body">
+        <div class="entry-top">
+          <div>
+            <div class="title">${escapeHtml(v.title)}</div>
+            <div class="channel">${escapeHtml(v.channel)}</div>
+          </div>
+          <div class="score-badge">${v.viral_score.toFixed(1)}</div>
+        </div>
+        <div class="tags">
+          <span class="tag">${escapeHtml(v.category)}</span>
+        </div>
+        <div class="stats-row">
+          <span class="stat"><b>${formatNumber(v.views)}</b> wyświetleń</span>
+          <span class="stat"><b>${formatNumber(v.likes)}</b> polubień</span>
+          <span class="stat"><b>${v.engagement_pct}%</b> engagement</span>
+          <span class="stat"><b>${formatNumber(Math.round(v.views_per_hour))}</b>/godz</span>
+          <span class="stat">${timeAgo(v.published_at)}</span>
+        </div>
+        <div class="velocity-bar-wrap">
+          <div class="velocity-bar" style="width:${Math.min(100, (v.views_per_hour / maxVelocity) * 100)}%"></div>
+        </div>
+      </div>
+    </a>
+  `).join('') + `</div>`;
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str || '';
+  return div.innerHTML;
+}
+
+loadReport();
+</script>
+</body>
+</html>
